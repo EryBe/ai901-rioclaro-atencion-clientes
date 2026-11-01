@@ -208,4 +208,4 @@ Consulta del pedido a través del asistente de IA, con una respuesta consistente
 
 #### Estado de publicación y contenido anterior
 
-La versión actual del portal ya no muestra la sección interna «Servicios digitales». Sin embargo, durante la verificación posterior al despliegue se comprobó que algunas URL de bundles JavaScript de una versión anterior todavía responden públicamente. No se verificó que contengan esa sección específica. La limpieza del directorio de publicación para retirar esos archivos requería reemplazar el contenido existente y no se ejecutó; por ello, no se debe considerar confirmada la retirada de todos los archivos de versiones anteriores.
+La versión actual del portal ya no muestra la sección interna «Servicios digitales». Sin embargo, algunas URL de bundles JavaScript de una versión anterior siguen respondiendo públicamente. No se verificó que contengan esa sección específica. La limpieza del directorio de publicación para retirar esos archivos no se ejecutó; por ello, no se debe considerar confirmada la retirada de todos los archivos de versiones anteriores.
