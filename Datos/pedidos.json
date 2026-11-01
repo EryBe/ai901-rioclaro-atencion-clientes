@@ -1,0 +1,42 @@
+[
+  {
+    "pedidoId": "PED-1001",
+    "clienteId": "CLI-001",
+    "producto": "Cloro Industrial 20L",
+    "estado": "Entregado",
+    "fechaPedido": "2026-09-15",
+    "fechaEntrega": "2026-09-18"
+  },
+  {
+    "pedidoId": "PED-1002",
+    "clienteId": "CLI-002",
+    "producto": "Detergente Concentrado 10L",
+    "estado": "En tránsito",
+    "fechaPedido": "2026-10-10",
+    "fechaEntrega": "2026-10-23"
+  },
+  {
+    "pedidoId": "PED-1003",
+    "clienteId": "CLI-003",
+    "producto": "Gel Antibacterial 1L",
+    "estado": "Preparación",
+    "fechaPedido": "2026-10-18",
+    "fechaEntrega": "2026-10-25"
+  },
+   {
+    "pedidoId": "PED-1004",
+    "clienteId": "CLI-004",
+    "producto": "Gel Antibacterial 2L",
+    "estado": "Retrasado",
+    "fechaPedido": "2026-10-13",
+    "fechaEntrega": "2026-10-26"
+  },
+   {
+    "pedidoId": "PED-1005",
+    "clienteId": "CLI-005",
+    "producto": "Gel Antibacterial 10L",
+    "estado": "Cancelado",
+    "fechaPedido": "2026-10-18",
+    "fechaEntrega": "2026-10-25"
+  }
+]

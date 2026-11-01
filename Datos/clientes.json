@@ -1,0 +1,42 @@
+[
+  {
+    "clienteId": "CLI-001",
+    "nombre": "Supermercados La Estrella",
+    "contacto": "Ana Martínez",
+    "correo": "ana.martinez@laestrella.com",
+    "telefono": "5551234567",
+    "ciudad": "Monterrey"
+  },
+  {
+    "clienteId": "CLI-002",
+    "nombre": "Abarrotes El Centro",
+    "contacto": "Carlos Gómez",
+    "correo": "carlos.gomez@elcentro.com",
+    "telefono": "5551234568",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "clienteId": "CLI-003",
+    "nombre": "Distribuidora Occidente",
+    "contacto": "Laura Reyes",
+    "correo": "laura.reyes@occidente.com",
+    "telefono": "5551234569",
+    "ciudad": "Morelia"
+  },
+  {
+    "clienteId": "CLI-004",
+    "nombre": "Distribuidora Sur",
+    "contacto": "Saúl Perez",
+    "correo": "saul.perez@sur.com",
+    "telefono": "5551234869",
+    "ciudad": "Chihuahua"
+  },
+  {
+    "clienteId": "CLI-005",
+    "nombre": "Distribuidora Sureste",
+    "contacto": "Myrna Gomez",
+    "correo": "myrna.gomez@sureste.com",
+    "telefono": "5551134869",
+    "ciudad": "Monterrey"
+  }
+]

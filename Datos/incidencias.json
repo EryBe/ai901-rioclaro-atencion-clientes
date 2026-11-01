@@ -1,0 +1,23 @@
+[
+  {
+    "folio": "INC-001",
+    "pedidoId": "PED-1002",
+    "tipo": "Entrega retrasada",
+    "estado": "Abierta",
+    "prioridad": "Media"
+  },
+  {
+    "folio": "INC-002",
+    "pedidoId": "PED-1005",
+    "tipo": "Producto dañado",
+    "estado": "En proceso",
+    "prioridad": "Alta"
+  },
+  {
+    "folio": "INC-003",
+    "pedidoId": "PED-1007",
+    "tipo": "Pedido incompleto",
+    "estado": "Resuelta",
+    "prioridad": "Alta"
+  }
+]

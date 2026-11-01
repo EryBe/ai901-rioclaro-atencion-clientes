@@ -1,0 +1,45 @@
+{
+  "name": "rio-claro-atencion-clientes",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"tsx watch server/index.ts\" \"vite --host 127.0.0.1\"",
+    "build": "tsc -p tsconfig.server.json && vite build",
+    "start": "node dist/server/index.js",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.server.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@azure/ai-form-recognizer": "^5.1.0",
+    "@azure/ai-projects": "^2.9.0",
+    "@azure/core-auth": "^1.11.0",
+    "@azure/data-tables": "^13.3.2",
+    "@azure/identity": "4.13.0",
+    "dotenv": "^18.0.9",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.7.1",
+    "lucide-react": "^0.468.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.43.0",
+    "multer": "^2.0.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/multer": "^2.0.0",
+    "@types/node": "^24.9.1",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@vitejs/plugin-react": "^5.0.4",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vite": "^7.1.12",
+    "vitest": "^5.0.5"
+  }
+}

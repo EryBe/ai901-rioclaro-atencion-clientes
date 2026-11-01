@@ -1,0 +1,32 @@
+[
+  {
+    "productoId": "PROD-001",
+    "nombre": "Cloro Industrial 20L",
+    "categoria": "Limpieza",
+    "precio": 450
+  },
+  {
+    "productoId": "PROD-002",
+    "nombre": "Detergente Concentrado 10L",
+    "categoria": "Limpieza",
+    "precio": 380
+  },
+  {
+    "productoId": "PROD-003",
+    "nombre": "Desinfectante Multiusos 5L",
+    "categoria": "Limpieza",
+    "precio": 220
+  },
+  {
+    "productoId": "PROD-004",
+    "nombre": "Jabón Industrial 20L",
+    "categoria": "Higiene",
+    "precio": 520
+  },
+  {
+    "productoId": "PROD-005",
+    "nombre": "Gel Antibacterial 1L",
+    "categoria": "Higiene",
+    "precio": 95
+  }
+]

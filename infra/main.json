@@ -1,0 +1,103 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.48.1.52935",
+      "templateHash": "14688374084187771163"
+    }
+  },
+  "parameters": {
+    "appServiceName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the existing Linux App Service."
+      }
+    },
+    "appServicePlanId": {
+      "type": "string",
+      "metadata": {
+        "description": "Existing App Service plan resource ID."
+      }
+    },
+    "location": {
+      "type": "string",
+      "metadata": {
+        "description": "Existing App Service and resource-group location."
+      }
+    },
+    "appInsightsResourceId": {
+      "type": "string",
+      "metadata": {
+        "description": "Existing Application Insights resource ID linked to the App Service."
+      }
+    },
+    "foundryAccountName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the existing Azure AI Services account."
+      }
+    },
+    "foundryProjectName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the existing Foundry project."
+      }
+    },
+    "foundryUserRoleDefinitionId": {
+      "type": "string",
+      "defaultValue": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '53ca6127-db72-4b80-b1b0-d745d6d5456d')]",
+      "metadata": {
+        "description": "Azure built-in role definition ID for Foundry User."
+      }
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Web/sites",
+      "apiVersion": "2024-04-01",
+      "name": "[parameters('appServiceName')]",
+      "location": "[parameters('location')]",
+      "tags": {
+        "hidden-link: /app-insights-resource-id": "[parameters('appInsightsResourceId')]"
+      },
+      "identity": {
+        "type": "SystemAssigned"
+      },
+      "properties": {
+        "serverFarmId": "[parameters('appServicePlanId')]",
+        "httpsOnly": true,
+        "siteConfig": {
+          "localMySqlEnabled": false,
+          "linuxFxVersion": "NODE|22-lts",
+          "netFrameworkVersion": "v4.0"
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Authorization/roleAssignments",
+      "apiVersion": "2022-04-01",
+      "scope": "[resourceId('Microsoft.CognitiveServices/accounts/projects', parameters('foundryAccountName'), parameters('foundryProjectName'))]",
+      "name": "[guid(resourceId('Microsoft.CognitiveServices/accounts/projects', parameters('foundryAccountName'), parameters('foundryProjectName')), resourceId('Microsoft.Web/sites', parameters('appServiceName')), parameters('foundryUserRoleDefinitionId'))]",
+      "properties": {
+        "roleDefinitionId": "[parameters('foundryUserRoleDefinitionId')]",
+        "principalId": "[reference(resourceId('Microsoft.Web/sites', parameters('appServiceName')), '2024-04-01', 'full').identity.principalId]",
+        "principalType": "ServicePrincipal"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Web/sites', parameters('appServiceName'))]"
+      ]
+    }
+  ],
+  "outputs": {
+    "appServicePrincipalId": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Web/sites', parameters('appServiceName')), '2024-04-01', 'full').identity.principalId]"
+    },
+    "appServiceUrl": {
+      "type": "string",
+      "value": "[format('https://{0}', reference(resourceId('Microsoft.Web/sites', parameters('appServiceName')), '2024-04-01').defaultHostName)]"
+    }
+  }
+}

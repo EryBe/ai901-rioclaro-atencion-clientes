@@ -1,0 +1,180 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Río Claro: build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: build verify",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: production build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: dev server",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: API debug",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"node_modules/tsx/dist/cli.mjs",
+				"server/index.ts"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: runtime audit",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: production audit recheck",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"audit",
+				"--omit=dev"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: final build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: release build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: API revalidate",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"node_modules/tsx/dist/cli.mjs",
+				"server/index.ts"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: dev revalidate",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: API live check",
+			"type": "shell",
+			"command": "node",
+			"args": [
+				"node_modules/tsx/dist/cli.mjs",
+				"server/index.ts"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "Río Claro: Foundry validated build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Río Claro: input reset build",
+			"type": "shell",
+			"command": "npm.cmd",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		}
+	]
+}

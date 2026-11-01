@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "appServiceName": {
+      "value": "rioclaro-atencion-clientes"
+    },
+    "appServicePlanId": {
+      "value": "/subscriptions/0714cc8b-3867-49f4-a999-706f2f66d84c/resourceGroups/RG-CRUD-Practica/providers/Microsoft.Web/serverfarms/planes-crud-Linux"
+    },
+    "location": {
+      "value": "westus3"
+    },
+    "appInsightsResourceId": {
+      "value": "/subscriptions/0714cc8b-3867-49f4-a999-706f2f66d84c/resourceGroups/RG-RioClaro-AI901/providers/microsoft.insights/components/rioclaro-atencion-clientes"
+    },
+    "foundryAccountName": {
+      "value": "rioclaro-ai901-resource"
+    },
+    "foundryProjectName": {
+      "value": "rioclaro-ai901"
+    }
+  }
+}
